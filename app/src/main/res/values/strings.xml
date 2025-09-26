@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Plant Pal</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="onboard1_headline1">Welcome to Plant Pal</string>
+    <string name="onboard1_headline2">Your Smart Plant Care Assistant</string>
+    <string name="onboard1_body">Track your plants, get personalized care tips, and watch your garden flourish</string>
+    <string name="key_features">Key Features</string>
+    <string name="feat_track_multiple">Track multiple plants</string>
+    <string name="feat_personalized_care">Personalized care schedules</string>
+    <string name="feat_health_monitoring">Plant health monitoring</string>
+    <string name="feat_growth_tracking">Growth progress tracking</string>
+    <string name="pager_1_of_3">1 of 3</string>
+    <!-- Onboarding 2 -->
+    <string name="previous">Previous</string>
+    <string name="onboard2_headline1">Never Miss Plant Care</string>
+    <string name="onboard2_headline2">Smart Reminders &amp; Notifications</string>
+    <string name="onboard2_body">Get timely reminders for watering, fertilizing, and plant care tasks. Set custom schedules that work for you.</string>
+    <string name="feat_custom_schedules">Custom reminder schedules</string>
+    <string name="feat_priority_notifications">Priority notifications</string>
+    <string name="feat_task_tracking">Care task tracking</string>
+    <string name="feat_flexible_timing">Flexible timing options</string>
+    <string name="pager_2_of_3">2 of 3</string>
+    <!-- Onboarding 3 -->
+    <string name="get_started">Get Started</string>
+    <string name="onboard3_headline1">Discover &amp; Learn</string>
+    <string name="onboard3_headline2">Extensive Plant Library</string>
+    <string name="onboard3_body">Access thousands of plant varieties with detailed care instructions, tips, and expert advice for every level.</string>
+    <string name="feat_library_many">1000+ plant varieties</string>
+    <string name="feat_expert_guides">Expert care guides</string>
+    <string name="feat_seasonal_tips">Seasonal care tips</string>
+    <string name="feat_problem_diagnosis">Problem diagnosis help</string>
+    <string name="pager_3_of_3">3 of 3</string>
+    <!-- Signup screen -->
+    <string name="signup_title">Join Plant Pal</string>
+    <string name="signup_subtitle">Start your plant care journey today</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="hint_full_name">Enter your name</string>
+    <string name="label_email">Email</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="label_password">Password</string>
+    <string name="hint_password">Create a password</string>
+    <string name="create_account">Create Account</string>
+    <string name="or_signup_with">or sign up with</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_apple">Continue with Apple</string>
+    <string name="already_have_account">Already have an account? <b>Sign In</b></string>
+    <!-- Validation/Toast messages -->
+    <string name="error_required">Required</string>
+    <string name="error_password_length">At least 6 characters</string>
+    <string name="signup_success_placeholder">Account created (placeholder)</string>
+    <string name="sign_in_clicked">Sign In clicked</string>
+    <!-- Login screen -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to continue your plant care journey</string>
+    <string name="sign_in">Sign in</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="dont_have_account">Don\'t have an account? <b>Sign Up</b></string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="signin_success_placeholder">Signed in (placeholder)</string>
+    <string name="forgot_password_clicked">Forgot password clicked</string>
+    <!-- Home Screen -->
+    <string name="plant_care_companion">Your plant care companion</string>
+    <string name="sri_lanka_galle">Sri Lanka, Galle</string>
+    <string name="weather_temp">22° C</string>
+    <string name="weather_condition">Partly - Cloudy with gentle Breeze</string>
+    <string name="humidity">65 %</string>
+    <string name="wind_speed">12 km/h</string>
+    <string name="uv_index">UV 6</string>
+    <string name="explore_plant_categories">Explore Plant Categories</string>
+    <string name="flowering_plants">Flowering Plants</string>
+    <string name="trees">Trees</string>
+    <string name="fruits">Fruits</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="herbs">Herbs</string>
+    <string name="cactus">Cactus</string>
+
+    <!-- Bottom Navigation -->
+    <string name="plant_library">Plant Library</string>
+    <string name="my_garden">My Garden</string>
+    <string name="camera">Camera</string>
+    <string name="reminders">Reminders</string>
+    <string name="growth_tracker">Growth Tracker</string>
+
+</resources>

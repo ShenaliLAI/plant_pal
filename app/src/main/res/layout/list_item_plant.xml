@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/plant_image"
+            android:layout_width="102dp"
+            android:layout_height="174dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_placeholder_transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/plant_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Rose"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/plant_image"
+            app:layout_constraintTop_toTopOf="@+id/plant_image"
+            app:layout_constraintEnd_toStartOf="@+id/add_button"/>
+
+        <TextView
+            android:id="@+id/scientific_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rosa Rubiginosa"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintStart_toStartOf="@+id/plant_name"
+            app:layout_constraintTop_toBottomOf="@+id/plant_name"
+            app:layout_constraintEnd_toEndOf="@+id/plant_name"/>
+
+        <TextView
+            android:id="@+id/plant_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Beautiful fragrant roses perfect for gardens"
+            app:layout_constraintStart_toStartOf="@+id/scientific_name"
+            app:layout_constraintTop_toBottomOf="@+id/scientific_name"
+            app:layout_constraintEnd_toEndOf="@+id/scientific_name"/>
+
+        <ImageView
+            android:id="@+id/add_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_add_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/plant_name" />
+
+        <LinearLayout
+            android:id="@+id/care_info_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/plant_description"
+            app:layout_constraintTop_toBottomOf="@+id/plant_description"
+            app:layout_constraintEnd_toEndOf="@+id/plant_description">
+
+            <TextView
+                android:id="@+id/watering_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_watering"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="Every 2-3 days" />
+
+            <TextView
+                android:id="@+id/sunlight_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_sunlight"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="Full sun" />
+
+            <TextView
+                android:id="@+id/temperature_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_temperature"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="60° - 70° F" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/details_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_right_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
