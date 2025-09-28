@@ -11,7 +11,7 @@ import com.example.plantpal.R
 import com.example.plantpal.MyGardenRepository
 import android.widget.Toast
 
-class PlantAdapter(private val plantList: List<Plant>) : RecyclerView.Adapter<PlantAdapter.PlantViewHolder>() {
+class PlantAdapter(private val plantList: List<Plant>, private val onAddClick: (Plant) -> Unit) : RecyclerView.Adapter<PlantAdapter.PlantViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlantViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_plant, parent, false)
@@ -47,7 +47,7 @@ class PlantAdapter(private val plantList: List<Plant>) : RecyclerView.Adapter<Pl
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     val plant = plantList[position]
-                    MyGardenRepository.addPlant(plant)
+                    onAddClick(plant)
                     Toast.makeText(itemView.context, "${plant.name} added to My Garden", Toast.LENGTH_SHORT).show()
                 }
             }

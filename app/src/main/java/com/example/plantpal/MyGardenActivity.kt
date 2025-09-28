@@ -3,26 +3,40 @@ package com.example.plantpal
 import android.content.Intent
 import android.os.Bundle
 import android.widget.GridView
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.plantpal.plants.Plant
 import com.example.plantpal.plants.PlantDetailsActivity
 import com.example.plantpal.profile.ProfileActivity
+import com.example.plantpal.viewmodels.MyGardenViewModel
+import com.example.plantpal.viewmodels.MyGardenViewModelFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MyGardenActivity : AppCompatActivity() {
 
     private lateinit var gridView: GridView
     private lateinit var adapter: PlantGridAdapter
+    private val plantList = mutableListOf<Plant>()
+
+    private val myGardenViewModel: MyGardenViewModel by viewModels {
+        MyGardenViewModelFactory((application as PlantPalApplication).gardenRepository)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_garden)
 
         gridView = findViewById(R.id.plant_grid)
-
-        val plantList = MyGardenRepository.getMyGardenPlants()
-
-        adapter = PlantGridAdapter(this, plantList)
+        adapter = PlantGridAdapter(this, plantList) { plant ->
+            myGardenViewModel.removePlant(plant)
+        }
         gridView.adapter = adapter
+
+        myGardenViewModel.myGardenPlants.observe(this) { plants ->
+            plantList.clear()
+            plantList.addAll(plants)
+            adapter.notifyDataSetChanged()
+        }
 
         gridView.setOnItemClickListener { _, _, position, _ ->
             val selectedPlant = plantList[position]
@@ -39,11 +53,5 @@ class MyGardenActivity : AppCompatActivity() {
         findViewById<android.widget.ImageView>(R.id.profile_icon).setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        // Refresh the grid view in case a plant was added or removed
-        adapter.notifyDataSetChanged()
     }
 }

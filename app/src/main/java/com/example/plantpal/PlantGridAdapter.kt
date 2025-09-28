@@ -14,7 +14,7 @@ import com.example.plantpal.growth.GrowthTrackerActivity
 import com.example.plantpal.plants.Plant
 import com.example.plantpal.reminders.AddReminderActivity
 
-class PlantGridAdapter(private val context: Context, private val plantList: List<Plant>) : BaseAdapter() {
+class PlantGridAdapter(private val context: Context, private val plantList: List<Plant>, private val onDeleteClick: (Plant) -> Unit) : BaseAdapter() {
 
     override fun getCount(): Int = plantList.size
 
@@ -61,8 +61,7 @@ class PlantGridAdapter(private val context: Context, private val plantList: List
                 .setTitle("Remove Plant")
                 .setMessage("Are you sure you want to remove this plant from your garden?")
                 .setPositiveButton("Yes") { _, _ ->
-                    MyGardenRepository.removePlant(plant)
-                    notifyDataSetChanged()
+                    onDeleteClick(plant)
                 }
                 .setNegativeButton("No", null)
                 .show()
