@@ -75,28 +75,36 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Watering"
-                    app:chipIcon="@drawable/water_plant" />
+                    app:chipIcon="@drawable/water_plant"
+                    app:chipBackgroundColor="@color/chip_state_selector"
+                    android:textColor="@color/chip_text_state_selector" />
 
                                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_fertilizing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fertilizing"
-                    app:chipIcon="@drawable/fertilize_plant" />
+                    app:chipIcon="@drawable/fertilize_plant"
+                    app:chipBackgroundColor="@color/chip_state_selector"
+                    android:textColor="@color/chip_text_state_selector" />
 
                                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_pruning"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pruning"
-                    app:chipIcon="@drawable/scissor_s" />
+                    app:chipIcon="@drawable/scissor_s"
+                    app:chipBackgroundColor="@color/chip_state_selector"
+                    android:textColor="@color/chip_text_state_selector" />
 
                                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_pest_control"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pest Control"
-                    app:chipIcon="@drawable/pest_plant" />
+                    app:chipIcon="@drawable/pest_plant"
+                    app:chipBackgroundColor="@color/chip_state_selector"
+                    android:textColor="@color/chip_text_state_selector" />
 
             </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
@@ -166,20 +174,32 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp">
 
-                                <EditText
+                                <TextView
                     android:id="@+id/date_edit_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="Date"/>
+                    android:hint="Date"
+                    android:background="@android:drawable/edit_text"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="false" />
 
-                                <EditText
+                                <TextView
                     android:id="@+id/time_edit_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:hint="Time"/>
+                    android:hint="Time"
+                    android:background="@android:drawable/edit_text"
+                    android:drawableEnd="@drawable/ic_clock"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="false" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
