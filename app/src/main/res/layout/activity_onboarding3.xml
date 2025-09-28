@@ -118,22 +118,22 @@
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_library_many" />
+            android:text="@string/feat_library_many" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_expert_guides" />
+            android:text="@string/feat_expert_guides" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_seasonal_tips" />
+            android:text="@string/feat_seasonal_tips" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_problem_diagnosis" />
+            android:text="@string/feat_problem_diagnosis" />
     </LinearLayout>
 
     <!-- Pager text bottom center -->

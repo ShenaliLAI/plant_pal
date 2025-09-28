@@ -1,6 +1,9 @@
 package com.example.plantpal.reminders
 
 import android.app.Activity
+import android.app.DatePickerDialog
+import android.app.TimePickerDialog
+import java.text.SimpleDateFormat
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +16,7 @@ import com.example.plantpal.R
 import com.example.plantpal.profile.ProfileActivity
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import java.util.Calendar
 
 class AddReminderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,8 +35,14 @@ class AddReminderActivity : AppCompatActivity() {
         profileIcon.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
-        val dateEditText = findViewById<EditText>(R.id.date_edit_text)
-        val timeEditText = findViewById<EditText>(R.id.time_edit_text)
+        val dateEditText = findViewById<TextView>(R.id.date_edit_text)
+        dateEditText.setOnClickListener {
+            showDatePickerDialog()
+        }
+        val timeEditText = findViewById<TextView>(R.id.time_edit_text)
+        timeEditText.setOnClickListener {
+            showTimePickerDialog()
+        }
         val titleTextView = findViewById<TextView>(R.id.add_reminder_title)
 
         val isEditMode = intent.getBooleanExtra("is_edit", false)
@@ -73,5 +83,39 @@ class AddReminderActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
         }
+    }
+
+    private fun showDatePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        val datePickerDialog = DatePickerDialog(this, { _, selectedYear, selectedMonth, selectedDay ->
+            val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+            val dateEditText = findViewById<TextView>(R.id.date_edit_text)
+            dateEditText.text = selectedDate
+        }, year, month, day)
+
+        datePickerDialog.show()
+    }
+
+    private fun showTimePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+        val minute = calendar.get(Calendar.MINUTE)
+
+        val timePickerDialog = TimePickerDialog(this, { _, selectedHour, selectedMinute ->
+            val selectedTime = Calendar.getInstance()
+            selectedTime.set(Calendar.HOUR_OF_DAY, selectedHour)
+            selectedTime.set(Calendar.MINUTE, selectedMinute)
+            val timeFormat = SimpleDateFormat("h:mm a")
+            val formattedTime = timeFormat.format(selectedTime.time)
+
+            val timeEditText = findViewById<TextView>(R.id.time_edit_text)
+            timeEditText.text = formattedTime
+        }, hour, minute, false)
+
+        timePickerDialog.show()
     }
 }

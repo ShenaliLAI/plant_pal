@@ -34,7 +34,7 @@ class RemindersActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reminders)
 
-        fetchWeather()
+//        fetchWeather()
         setupBottomNavigation()
 
         val addReminderButton = findViewById<Button>(R.id.add_reminder_button)
@@ -130,7 +130,7 @@ class RemindersActivity : AppCompatActivity() {
         }
     }
 
-    private fun fetchWeather() {
+    /*private fun fetchWeather() {
         val textViewTemp = findViewById<TextView>(R.id.temperature_text)
         val textViewCondition = findViewById<TextView>(R.id.weather_condition_text)
         val apiKey = "YOUR_API_KEY" // IMPORTANT: Replace with your actual API key
@@ -158,5 +158,5 @@ class RemindersActivity : AppCompatActivity() {
             }
         )
         queue.add(jsonObjectRequest)
-    }
+    }*/
 }

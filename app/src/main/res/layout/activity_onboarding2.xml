@@ -130,22 +130,22 @@
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_custom_schedules" />
+            android:text="@string/feat_custom_schedules" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_priority_notifications" />
+            android:text="@string/feat_priority_notifications" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_task_tracking" />
+            android:text="@string/feat_task_tracking" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_flexible_timing" />
+            android:text="@string/feat_flexible_timing" />
     </LinearLayout>
 
     <!-- Pager text bottom center -->

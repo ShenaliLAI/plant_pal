@@ -41,8 +41,6 @@ android {
 }
 
 dependencies {
-    val camerax_version = "1.3.0"
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -50,14 +48,6 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
-
-    // CameraX dependencies
-    implementation("androidx.camera:camera-core:$camerax_version")
-    implementation("androidx.camera:camera-camera2:$camerax_version")
-    implementation("androidx.camera:camera-lifecycle:$camerax_version")
-    implementation("androidx.camera:camera-view:$camerax_version")
-
-    // Glide for image loading
     implementation("com.github.bumptech.glide:glide:4.12.0")
     kapt("com.github.bumptech.glide:compiler:4.12.0")
 

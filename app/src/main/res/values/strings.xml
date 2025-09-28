@@ -81,5 +81,17 @@
     <string name="camera">Camera</string>
     <string name="reminders">Reminders</string>
     <string name="growth_tracker">Growth Tracker</string>
+    <string name="string_feat_track_multiple">• @string/feat_track_multiple</string>
+    <string name="string_feat_personalized_care">• @string/feat_personalized_care</string>
+    <string name="string_feat_health_monitoring">• @string/feat_health_monitoring</string>
+    <string name="string_growth_tracking">• @string/growth_tracking</string>
+    <string name="string_feat_custom_schedules">• @string/feat_custom_schedules</string>
+    <string name="string_feat_priority_notifications">• @string/feat_priority_notifications</string>
+    <string name="string_feat_task_tracking">• @string/feat_task_tracking</string>
+    <string name="string_feat_flexible_timing">• @string/feat_flexible_timing</string>
+    <string name="string_feat_library_many">• @string/feat_library_many</string>
+    <string name="string_feat_expert_guides">• @string/feat_expert_guides</string>
+    <string name="string_feat_seasonal_tips">• @string/feat_seasonal_tips</string>
+    <string name="string_feat_problem_diagnosis">• @string/feat_problem_diagnosis</string>
 
 </resources>
