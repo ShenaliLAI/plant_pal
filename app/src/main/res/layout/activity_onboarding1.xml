@@ -117,22 +117,22 @@
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_track_multiple" />
+            android:text="@string/feat_custom_schedules" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_personalized_care" />
+            android:text="@string/feat_personalized_care" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_health_monitoring" />
+            android:text="@string/feat_health_monitoring" />
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• @string/feat_growth_tracking" />
+            android:text="@string/growth_tracker" />
     </LinearLayout>
 
     <!-- Pager text bottom center -->
