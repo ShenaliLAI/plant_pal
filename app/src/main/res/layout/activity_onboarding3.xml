@@ -106,29 +106,32 @@
     <!-- Bullet list -->
     <LinearLayout
         android:id="@+id/featuresList"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/featuresTitle"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/featuresTitle">
 
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/feat_library_many" />
+
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/feat_expert_guides" />
+
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/feat_seasonal_tips" />
+
         <TextView
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
@@ -140,14 +143,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="184dp"
-        android:layout_height="302dp"
+        android:layout_width="207dp"
+        android:layout_height="220dp"
         app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/featuresList"
-        app:layout_constraintVertical_bias="0.571"
+        app:layout_constraintVertical_bias="0.413"
         app:srcCompat="@drawable/indoor_garden" />
 
     <TextView
@@ -183,12 +186,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNext"
         style="@style/Widget.Material3.Button"
-        android:layout_width="136dp"
+        android:layout_width="140dp"
         android:layout_height="49dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/plant_light_green"
-        android:minWidth="120dp"
+        android:minWidth="12dp"
         android:text="@string/get_started"
         android:textColor="@android:color/white"
         app:icon="@drawable/ic_arrow_right"
